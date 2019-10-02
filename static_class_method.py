@@ -6,6 +6,9 @@ class complex:
         self.x = x
         self.y = y
         complex.cnt+=1
+    
+    def print_class_name(self):
+        return type(self).__name__
       
     @property
     def real(self):
@@ -46,7 +49,7 @@ t = complex(3,4)
 print(z)
 z.real=10
 print(z)
-
+print(z.print_class_name())
 
 # use of @classmethod
 v = complex.from_tuple((3,5))
