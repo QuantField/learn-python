@@ -5,9 +5,8 @@ class complex:
     def __init__(self,x,y):
         self.x = x
         self.y = y
-        #complex.cnt+=1
-        self.cnt+=1
-
+        complex.cnt+=1
+      
     @property
     def real(self):
         return self.x
@@ -24,8 +23,8 @@ class complex:
     def imag(self,y):
         self.y=y 
 
-    def __add__(z1,z2):
-        return complex(z1.x+z2.x, z1.y+z2.y)
+    def __add__(self,z):
+        return complex(self.x+z.x, self.y+z.y)
 
     @staticmethod
     def mod(z):
@@ -52,7 +51,7 @@ print(z)
 # use of @classmethod
 v = complex.from_tuple((3,5))
 print(v)
-print(v.cnt)
+print("number of instances:",v.cnt)
 
 # use of __add__
 print(z+v)
