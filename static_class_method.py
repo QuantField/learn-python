@@ -5,7 +5,8 @@ class complex:
     def __init__(self,x,y):
         self.x = x
         self.y = y
-        complex.cnt+=1
+        #complex.cnt+=1
+        self.cnt+=1
 
     @property
     def real(self):
