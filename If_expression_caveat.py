@@ -2,6 +2,7 @@ valtests = [0, 1, '', ' ', True, 'str', 23, -1, None]
 print("exprssion in [0, 1, '', ' ', True, 'str', 23, -1, None]")
 print()
 
+# 0, '', None resolve to False, the rest to True
 print("Statement : if expression:")
 print("--------------------------")
 for exp in valtests:
@@ -11,6 +12,7 @@ for exp in valtests:
     print(exp, 'Resolves to False')
 
 print()
+# only 1 and True resolve to True
 print("Statement : if expression == True:")
 print("--------------------------")
 for exp in valtests:
@@ -20,6 +22,7 @@ for exp in valtests:
     print(exp, 'Resolves to False')
 
 print()
+# only True resolves to True
 print("Statement : if expression is True:")
 print("--------------------------")
 for exp in valtests:
