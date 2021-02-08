@@ -27,6 +27,11 @@ df2 =pd.pivot_table(df, index='continent',
                                 axis='columns')
 
 
+# using groupby
+df.groupby(['continent']).agg({'total_litres_of_pure_alcohol': sum})
+  .rename(columns={'total_litres_of_pure_alcohol':'SUM'})
+
+
 
 #df2.columns.rename({'total_litres_of_pure_alcohol': 'total'}, inplace=True)
 print('#----------------------#')
